@@ -127,24 +127,24 @@ recommendation-system/
 ## Pipeline Architecture
 
 MovieLens 100K CSV files
-    ↓
-src/data/ingestion.py         data/raw/
-    ↓
-src/data/preprocessing.py     user-item matrix
-    ↓
-src/features/feature_engineering.py   similarity matrices
-    ↓
-src/models/train.py           models/ (SVD, User-CF, Item-CF)
-    ↓
-src/models/evaluate.py        RMSE · MAE · Precision@K · Recall@K
-    ↓
-FastAPI /recommend endpoint   top-N recommendations
-    ↓
-PostgreSQL                    store ratings + predictions
-    ↓
-Streamlit dashboard           interactive recommendations
-    ↓
-Docker + Render               production deployment
+↓
+src/data/ingestion.py          → data/raw/
+↓
+src/data/preprocessing.py      → user-item matrix
+↓
+src/features/feature_engineering.py → similarity matrices
+↓
+src/models/train.py            → models/ (SVD, User-CF, Item-CF)
+↓
+src/models/evaluate.py         → RMSE · MAE · Precision@K · Recall@K
+↓
+FastAPI /recommend endpoint    → top-N recommendations
+↓
+PostgreSQL                     → store ratings + predictions
+↓
+Streamlit dashboard            → interactive recommendations
+↓
+Docker + Render                → production deployment
 
 ---
 
