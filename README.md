@@ -91,6 +91,7 @@ u1.test      → 20% test split (pre-made)
 
 ## Project Structure
 
+```text
 recommendation-system/
 ├── configs/                  Model parameters (YAML)
 ├── data/
@@ -112,6 +113,7 @@ recommendation-system/
 ├── Dockerfile
 ├── docker-compose.yml
 └── requirements.txt
+```
 
 ---
 
