@@ -63,12 +63,15 @@ u1.test      → 20% test split (pre-made)
 
 ## Live Results
 
+## Live Results
+
+| Model | RMSE | MAE | Notes |
+|-------|------|-----|-------|
 | SVD | 0.9561 | 0.7524 | Strong baseline |
 | Item-Based CF | 0.9540 | 0.7488 | ✅ Best performer — production model |
 | User-Based CF | 0.9703 | 0.7654 | Baseline |
 
 *Results updated after training*
-
 ---
 
 ## Tech Stack
