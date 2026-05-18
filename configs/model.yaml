@@ -21,22 +21,16 @@ preprocessing:
 
 models:
   svd:
-    n_factors: 50
+    n_factors: 100
     n_epochs: 20
     lr_all: 0.005
     reg_all: 0.02
     random_state: 42
-
-user_cf:
+  user_cf:
     k_neighbors: 40
     similarity: "cosine"
     min_support: 5
-
-item_cf:
+  item_cf:
     k_neighbors: 40
     similarity: "cosine"
     min_support: 5
-
-api:
-  top_n: 10
-  min_rating: 3.5
