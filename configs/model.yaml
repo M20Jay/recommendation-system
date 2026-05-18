@@ -34,3 +34,7 @@ models:
     k_neighbors: 40
     similarity: "cosine"
     min_support: 5
+
+api:
+  top_n: 10
+  min_rating: 3.5
