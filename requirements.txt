@@ -5,7 +5,7 @@ scikit-learn==1.4.2
 scipy==1.13.0
 
 # Recommendation models
-scikit-surprise==1.1.3
+scikit-surprise
 
 # API
 fastapi==0.103.1
