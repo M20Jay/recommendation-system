@@ -10,6 +10,7 @@ Date: May 2026
 import streamlit as st
 import requests
 import pandas as pd
+import os
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -246,7 +247,8 @@ st.markdown("""
 # ─────────────────────────────────────────────
 # API
 # ─────────────────────────────────────────────
-API_URL = "http://127.0.0.1:8000"
+import os
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 
 def check_health():
