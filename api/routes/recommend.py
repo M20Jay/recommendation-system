@@ -5,6 +5,7 @@ from datetime import datetime
 from api.schemas.request import RecommendRequest
 from api.schemas.response import RecommendResponse, MovieRecommendation
 from api.dependencies import model, movies, ratings
+
 router = APIRouter()
 
 
@@ -46,6 +47,14 @@ def recommend(request: RecommendRequest):
                 title=title,
                 predicted_rating=round(pred.est, 2)
             ))
+        
+        # Save to database
+        try:
+            from src.utils.database import save_recommendations
+            recs_dict = [r.dict() for r in recs]
+            save_recommendations(request.user_id, recs_dict, "Item-CF")
+        except Exception as e:
+            logger.warning(f"DB save skipped: {e}")
 
         return RecommendResponse(
             user_id=request.user_id,
