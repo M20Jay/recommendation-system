@@ -364,6 +364,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ─────────────────────────────────────────────
+# Warning banner
+# ─────────────────────────────────────────────
+st.info("⚡ First request may take 60 seconds — free tier server waking up. Subsequent requests are instant.")
+
+# ─────────────────────────────────────────────
 # Metrics
 # ─────────────────────────────────────────────
 st.markdown("""
@@ -405,7 +410,7 @@ tab1, tab2, tab3 = st.tabs([
 # ─────────────────────────────────────────────
 with tab1:
     if recommend_btn:
-        with st.spinner("🎬 Finding your perfect movies..."):
+        with st.spinner("🎬 Finding your perfect movies... (first load may take 60 seconds while the server wakes up)"):
             data = get_recommendations(user_id, n_recs)
 
         if data and data.get('recommendations'):
