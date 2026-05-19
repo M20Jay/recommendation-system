@@ -51,7 +51,7 @@ def recommend(request: RecommendRequest):
         # Save to database
         try:
             from src.utils.database import save_recommendations
-            recs_dict = [r.dict() for r in recs]
+            recs_dict = [r.model_dump() for r in recs]
             save_recommendations(request.user_id, recs_dict, "Item-CF")
         except Exception as e:
             logger.warning(f"DB save skipped: {e}")

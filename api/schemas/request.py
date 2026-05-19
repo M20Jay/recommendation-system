@@ -4,13 +4,11 @@ from pydantic import BaseModel, Field
 
 
 class RecommendRequest(BaseModel):
-    user_id: int = Field(..., description="User ID to generate recommendations for")
-    n: int = Field(default=10, description="Number of recommendations to return")
+    user_id: int = Field(..., description="User ID")
+    n: int = Field(default=10, description="Number of recommendations")
 
-    class Config:
-        json_schema_extra = {
-            "example": {
-                "user_id": 196,
-                "n": 10
-            }
+    model_config = {
+        "json_schema_extra": {
+            "example": {"user_id": 196, "n": 10}
         }
+    }
