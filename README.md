@@ -12,6 +12,7 @@
 Built by [Martin James Ng'ang'a](https://github.com/M20Jay) — MLOps Engineer | Nairobi, Kenya 🇰🇪
 
 > 🌐 **Live Dashboard** → https://recommendation-system-dashboard.onrender.com
+![CineAI Dashboard](screenshots/cineai-recommendation-dashboard-martin-nganga.png)
 > 
 > ⚡ **Live API** → https://recommendation-system-2gt5.onrender.com/docs
 > 
