@@ -11,7 +11,11 @@
 
 Built by [Martin James Ng'ang'a](https://github.com/M20Jay) — MLOps Engineer | Nairobi, Kenya 🇰🇪
 
-> 🔗 **Live API** — added on deployment
+> 🌐 **Live Dashboard** → https://recommendation-system-dashboard.onrender.com
+> 
+> ⚡ **Live API** → https://recommendation-system-2gt5.onrender.com/docs
+> 
+> 📁 **GitHub** → https://github.com/M20Jay/recommendation-system
 
 ---
 
@@ -63,8 +67,6 @@ u1.test      → 20% test split (pre-made)
 
 ## Live Results
 
-## Live Results
-
 | Model | RMSE | MAE | Notes |
 |-------|------|-----|-------|
 | SVD | 0.9561 | 0.7524 | Strong baseline |
@@ -94,26 +96,48 @@ u1.test      → 20% test split (pre-made)
 
 ```text
 recommendation-system/
-├── configs/                  Model parameters (YAML)
+├── configs/
+│   └── model.yaml                Model parameters — SVD · User-CF · Item-CF
 ├── data/
-│   ├── raw/                  MovieLens 100K files
-│   └── processed/            Clean matrices and features
-├── models/                   Trained model files
-├── notebooks/                EDA — ratings analysis
-├── screenshots/              Dashboard screenshots
+│   ├── raw/                      MovieLens 100K files — u.data · u.item · u.user
+│   └── processed/                Cleaned data — ratings · movies · users · features
+├── models/
+│   ├── svd_model.pkl             Trained SVD model
+│   ├── user_cf_model.pkl         Trained User-CF model
+│   ├── item_cf_model.pkl         Trained Item-CF model
+│   └── production_model.pkl      Best model — Item-CF RMSE 0.9540
+├── notebooks/
+│   └── 01_EDA.ipynb              Exploratory data analysis — 10 sections
+├── reports/
+│   └── figures/                  EDA visualisations
 ├── src/
-│   ├── data/                 Ingestion and preprocessing
-│   ├── features/             Feature engineering
-│   ├── models/               Train and evaluate
-│   └── utils/                Logger and database helpers
+│   ├── data/
+│   │   ├── ingestion.py          Data validation and checks
+│   │   └── preprocessing.py      Clean and validate raw data
+│   ├── features/
+│   │   └── feature_engineering.py  User · movie · temporal features
+│   ├── models/
+│   │   ├── train.py              Train all three models from config
+│   │   └── evaluate.py           RMSE · MAE · Precision@K
+│   └── utils/
+│       ├── logger.py             Logging utility
+│       └── database.py           PostgreSQL connection and storage
 ├── api/
-│   ├── main.py               FastAPI application
-│   └── routes/               Recommend and health endpoints
-├── tests/                    pytest — written for every file
-├── streamlit_app.py          Interactive dashboard
-├── Dockerfile
-├── docker-compose.yml
-└── requirements.txt
+│   ├── main.py                   FastAPI application entry point
+│   ├── dependencies.py           Shared model and data loading
+│   ├── schemas/
+│   │   ├── request.py            RecommendRequest schema
+│   │   └── response.py           RecommendResponse · HealthResponse
+│   └── routes/
+│       ├── health.py             GET /health endpoint
+│       └── recommend.py          POST /recommend endpoint
+├── tests/
+│   └── test_recommend.py         pytest — 6/6 passing
+├── streamlit_app.py              CineAI Netflix-standard dashboard
+├── Dockerfile                    Production container
+├── docker-compose.yml            PostgreSQL + API + Streamlit
+├── requirements.txt              All dependencies
+└── .env                          Environment variables (not committed)
 ```
 
 ---
