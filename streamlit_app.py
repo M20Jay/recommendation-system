@@ -308,7 +308,7 @@ with st.sidebar:
         "How many recommendations?",
         min_value=5, max_value=20, value=10)
 
-    recommend_btn = st.button("🎬 Get My Recommendations")
+    recommend_btn = st.button( "🎬 GET MY RECOMMENDATIONS", use_container_width=True)
 
     st.markdown("---")
     st.markdown("### 📈 Quick Stats")
