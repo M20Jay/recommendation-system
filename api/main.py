@@ -12,7 +12,7 @@ from api.routes import health, recommend
 
 app = FastAPI(
     title="Movie Recommendation API",
-    description="Collaborative filtering recommendations — MovieLens 100K. | Martin James | MLOps Engineer | github.com/M20Jay",
+    description="Collaborative filtering recommendations — MovieLens 100K. |Built by Martin James | MLOps Engineer | github.com/M20Jay",
     version="1.0.0"
 )
 
