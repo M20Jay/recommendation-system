@@ -1,17 +1,17 @@
 # Week 7 — Recommendation System
-## Learning Notes
-**Martin James Ng'ang'a | MLOps Engineer | Nairobi, Kenya 🇰🇪**
-**May 2026 | github.com/M20Jay**
+
 
 ---
 
-## 🔗 Live Links
+## 🔗 Links
 
 | | URL |
 |---|---|
 | 🌐 Dashboard | https://recommendation-system-dashboard.onrender.com |
 | ⚡ API | https://recommendation-system-2gt5.onrender.com/docs |
 | 📁 GitHub | https://github.com/M20Jay/recommendation-system |
+
+> ⚠️ APIs migrating from Render to AWS EC2. Live again by 31 May 2026.
 
 ---
 
