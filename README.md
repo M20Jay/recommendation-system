@@ -11,9 +11,9 @@
 
 Built by [Martin James Ng'ang'a](https://github.com/M20Jay) — MLOps Engineer | Nairobi, Kenya 🇰🇪
 
-> 🌐 **Live Dashboard** → https://recommendation-system-dashboard.onrender.com
+> 🌐 **Live Dashboard** → https://disgrace-system-robust.ngrok-free.dev
 > 
-> ⚡ **Live API** → https://recommendation-system-2gt5.onrender.com/docs
+> ⚡ **Live API** → http://18.184.3.203:8001/docs
 > 
 > 📁 **GitHub** → https://github.com/M20Jay/recommendation-system
 
