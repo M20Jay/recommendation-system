@@ -13,7 +13,7 @@ Built by [Martin James Ng'ang'a](https://github.com/M20Jay) — MLOps Engineer |
 
 > 🌐 **Live Dashboard** → https://disgrace-system-robust.ngrok-free.dev
 > 
-> ⚡ **Live API** → http://18.184.3.203:8001/docs
+> ⚡ **Live API** → http://52.57.213.229:8001/docs
 > 
 > 📁 **GitHub** → https://github.com/M20Jay/recommendation-system
 
