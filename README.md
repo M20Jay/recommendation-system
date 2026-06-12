@@ -11,7 +11,7 @@
 
 Built by [Martin James Ng'ang'a](https://github.com/M20Jay) — MLOps Engineer | Nairobi, Kenya 🇰🇪
 
-> 🌐 **Live Dashboard** → https://disgrace-system-robust.ngrok-free.dev
+> 🌐 **Live Dashboard** → https://recommendation.martin-mlops.com
 > 
 > ⚡ **Live API** → http://3.67.15.230:8001/docs
 > 
