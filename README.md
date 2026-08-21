@@ -13,7 +13,7 @@ Built by [Martin James Ng'ang'a](https://github.com/M20Jay) — MLOps Engineer |
 
 > 🌐 **Live Dashboard** → https://recommendation.martin-mlops.com
 > 
-> ⚡ **Live API** → http://3.67.15.230:8001/docs
+> ⚡ **Live API** → https://martin-mlops.com/recommend/docs
 > 
 > 📁 **GitHub** → https://github.com/M20Jay/recommendation-system
 
@@ -35,6 +35,19 @@ Every organisation with users needs to answer one question:
 This pipeline answers that question automatically using three complementary approaches — collaborative filtering, item-based filtering, and matrix factorization (SVD).
 
 ---
+
+
+## Where This Fits
+
+A recommendation score isn't the product — it's an input to whatever surfaces it to a real user, at the right moment:
+
+- **Personalization engine integration** — the ranked list this pipeline produces needs to plug into a product's actual serving layer (a homepage, an app feed, an email campaign), not sit in a batch file nobody reads.
+- **A/B testing infrastructure** — recommendation quality is only provable through live experimentation. Precision@10 offline is a proxy; actual click-through and conversion in a live A/B test is the real measure.
+- **Cold-start handling** — new users and new items have no history to collaborate on. A production system needs a fallback strategy (popularity-based, content-based) for exactly the users this model can't yet serve well.
+- **Feedback loop** — what a user actually clicks, watches, or buys after seeing a recommendation is the real label. Without capturing that outcome and feeding it back, the model never improves past its initial training snapshot.
+- **Domain transfer** — the same collaborative filtering math applies wherever there's a sparse user-item interaction matrix: a bank's product cross-sell, a telecom's data bundle upsell, a healthcare provider's resource matching. The model architecture doesn't change; only the domain does.
+
+This pipeline currently serves recommendations through its own API and dashboard — the natural next integration is embedding its output directly into a product's existing user-facing surface, rather than requiring a separate destination.
 
 ## Dataset
 
